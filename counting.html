@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body{
+            text-align: center;
+            background-image: linear-gradient(315deg,rgb(35, 38, 38)12% , rgb(38, 68, 38) 30%);
+        }
+        .container  {
+            padding: 20px;
+            background-color: rgb(15, 13, 13);
+            width: 400px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+
+
+        button{
+            width: 200px;
+            margin: 10px 0;
+            height: 30px;
+            border-radius: 30px;
+            border: 0;
+            position: relative;
+            background-color: rgb(7, 107, 60);
+             z-index: 1;
+        }
+
+        button::after{
+            content: '';
+            position:absolute;
+            z-index: -1;
+            background: linear-gradient(rgb(106, 250, 207),rgb(141, 237, 211));
+            height: 0;
+            width: 0;
+           top: 0;
+            left: 0;
+            right: 0;
+            
+            border-radius: 30px;
+            transition: all .2s ease-in-out;
+        }
+
+        button:hover::after{
+            width: 100%;
+            height: 100%;
+        }
+        button:focus{
+            border: 1px solid white;
+        }
+      
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>Couting App</h1>
+    <h2 id="counter-el">0</h2>
+    <button onclick="countDogs()">INCREMENT</button>
+    <BUtton onclick="saveDogs()">SAVE</BUtton>
+    <p id="previous-el">Previous:</p>
+
+    <h1>Emoji<br>Fighter</h1>
+    <div id="stage" style="width: 400px;"></div>
+    <button id="fightButton">Pick Fighters!</button>
+    <script src="index.js"></script>
+
+
+
+
+
+
+
+<script src="cookprac.js"></script>
+
+
+   <!---- <script src="counting.js"></script>-->
+</body>
+   </div>
+</html>
