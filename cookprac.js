@@ -6,6 +6,11 @@ let fighters = ["🐉", "🐥",
 
 let stageEl = document.querySelector('#stage');
 let fightButton = document.getElementById('fightButton');
+let counterEl = document.querySelector('#counter-el');//binding for rendering counter..
+let counter = 0;//counter intialising
+let saveEl = document.querySelector('#previous-el');
+
+
 
 fightButton.addEventListener('click',function(){
 
@@ -20,10 +25,6 @@ stageEl.textContent += fighters[randomNumber] +"vs" + fighters[randomNumber2];
 
 
 ///count
-let counterEl = document.querySelector('#counter-el');//binding for rendering counter..
-let counter = 0;//counter intialising
-let saveEl = document.querySelector('#previous-el');
-
 
 //function to save dogs
 function saveDogs(){
